@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Trasporto - Tabelle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Avenir Next World', sans-serif;
+      background-color: #698dd2;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container { display: flex; height: 100vh; width: 100vw; }
+    .left-pane { width: 45vw; min-width: 350px; height: 100vh; overflow: hidden; }
+    .map-box { width: 100%; height: 100%; border: none; }
+    .right-pane { flex: 1; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; }
+    .title-box {
+      display: flex; align-items: center; justify-content: flex-start; gap: 12px;
+      position: sticky; top: 0; background-color: #698dd2; z-index: 10; padding: 12px 0 8px;
+    }
+    .title-box img { width: 64px; height: auto; }
+    h1 { font-size: 22px; margin: 0; white-space: nowrap; }
+    .table-box { background-color: rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; margin-bottom: 20px; }
+    .description { margin-top: 6px; font-size: 13px; color: #ffffffcc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #ffffff55; padding: 8px; text-align: center; }
+    th { background-color: #ffffff33; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="left-pane">
+    <iframe class="map-box" src="https://iuav-labgis.maps.arcgis.com/apps/instant/basic/index.html?appid=526dd2f6955f4137b716356140b8c55a"></iframe>
+  </div>
+  <div class="right-pane">
+    <div class="title-box">
+      <img src="https://i.imgur.com/qvW0ViF.png" alt="Icona Trasporto Ricamata" />
+      <h1>Trasporto Marittimo: Dati Spaziali e Socio-economici</h1>
+    </div>
+
+    <div class="table-box">
+      <div class="description">Turnover del settore (milioni di euro).</div>
+      <table>
+        <tr><th>Anno</th><th>Turnover (mln €)</th></tr>
+        <tr><td>2013</td><td>5166.29</td></tr><tr><td>2014</td><td>4928.65</td></tr><tr><td>2015</td><td>5420.95</td></tr>
+        <tr><td>2016</td><td>5607.94</td></tr><tr><td>2017</td><td>6589.22</td></tr><tr><td>2018</td><td>7669.17</td></tr>
+        <tr><td>2019</td><td>7489.48</td></tr><tr><td>2020</td><td>2032.53</td></tr><tr><td>2021</td><td>3585.19</td></tr><tr><td>2022</td><td>6970.82</td></tr>
+      </table>
+    </div>
+
+    <div class="table-box">
+      <div class="description">Valore Aggiunto Lordo (GVA) generato dal trasporto marittimo.</div>
+      <table>
+        <tr><th>Anno</th><th>GVA (mln €)</th></tr>
+        <tr><td>2013</td><td>926.60</td></tr><tr><td>2014</td><td>842.92</td></tr><tr><td>2015</td><td>1102.35</td></tr>
+        <tr><td>2016</td><td>1357.11</td></tr><tr><td>2017</td><td>1651.98</td></tr><tr><td>2018</td><td>1891.61</td></tr>
+        <tr><td>2019</td><td>1986.97</td></tr><tr><td>2020</td><td>509.13</td></tr><tr><td>2021</td><td>804.62</td></tr><tr><td>2022</td><td>1568.24</td></tr>
+      </table>
+    </div>
+
+    <div class="table-box">
+      <div class="description">Occupazione (FTE) nel settore trasporto marittimo.</div>
+      <table>
+        <tr><th>Anno</th><th>Occupazione (FTE)</th></tr>
+        <tr><td>2013</td><td>13.56</td></tr><tr><td>2014</td><td>12.11</td></tr><tr><td>2015</td><td>14.93</td></tr>
+        <tr><td>2016</td><td>16.97</td></tr><tr><td>2017</td><td>19.77</td></tr><tr><td>2018</td><td>22.10</td></tr>
+        <tr><td>2019</td><td>21.86</td></tr><tr><td>2020</td><td>7.37</td></tr><tr><td>2021</td><td>10.76</td></tr><tr><td>2022</td><td>16.82</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
